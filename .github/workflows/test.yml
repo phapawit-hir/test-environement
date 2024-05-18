@@ -11,6 +11,7 @@ on:
     types:
       - synchronize
       - opened
+  workflow_dispatch:
 
 env:
   WORKFLOW_ENV: "this is workflow env....."
@@ -32,7 +33,7 @@ jobs:
       - name: setup python environment
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11.2' 
+          python-version: '3.11.2'
               
       - name: run python script
         run: |
