@@ -22,9 +22,8 @@ jobs:
     env:
       FROM_ENVIRONMENT_GITHUB_ACTION_2: ${{ vars.FROM_ENVIRONMENT_GITHUB_ACTION_2 }}
       FROM_ENVIRONMENT_GITHUB_ACTION: ${{ vars.FROM_ENVIRONMENT_GITHUB_ACTION }}
-    runs-on: ubuntu-latest
-    env:
       ENV_FROM_JOB: "Jobs env..."
+    runs-on: ubuntu-latest
 
     steps:
       - name: get code from github
