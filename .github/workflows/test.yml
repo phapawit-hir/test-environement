@@ -1,0 +1,27 @@
+name: test app
+
+on:
+  push:
+    # branches:
+    #   - phapawith/20240501_branch
+    # paths-ignore:
+    #   - '.github/workflows/*'
+    #   - app.py
+  pull_request:
+    types:
+      - synchronize
+      - opened
+
+env:
+  WORKFLOW_ENV: "this is workflow env....."
+
+
+jobs:
+  test:
+    environment: testing
+    runs-on: ubuntu-latest
+    env:
+      ENV_FROM_JOB: "Jobs env..."
+
+
+    
