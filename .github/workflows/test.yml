@@ -23,5 +23,18 @@ jobs:
     env:
       ENV_FROM_JOB: "Jobs env..."
 
+  steps:
+    - name: get code from github
+      uses: actions/checkout@v4
+
+    - name: setup python environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11.2' 
+             
+    - name: run python script
+      run: |
+        python3 test.py
+
 
     
